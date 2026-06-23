@@ -5,7 +5,7 @@ ARG SKIP_PEAS=flase
 
 COPY ./ ./
 
-RUN bash -c ./script.sh
+RUN chmod 777 ./script.sh && bash -c ./script.sh
 
 ENTRYPOINT /linpeas.sh
 
