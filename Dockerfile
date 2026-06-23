@@ -8,7 +8,11 @@ apt-get update
 apt-get install -y curl bash
 curl -L https://github.com/peass-ng/PEASS-ng/releases/latest/download/linpeas.sh -o /linpeas.sh
 chmod +x /linpeas.sh
-echo "------\n$SKIP_PEAS\n------"
+EOF
+
+RUN echo "------\n$SKIP_PEAS\n------"
+
+RUN <<EOF
 if [[ $SKIP_PEAS == "true"]] ; then
         echo "Skipping execution...."
 else
