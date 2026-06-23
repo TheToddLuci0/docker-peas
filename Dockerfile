@@ -14,7 +14,7 @@ RUN echo "------\n$SKIP_PEAS\n------"
 RUN env
 
 RUN <<EOF
-if [[ $SKIP_PEAS == "true"]] ; then
+if [[ $SKIP_PEAS == "true" ]] ; then
         echo "Skipping execution...."
 else
         bash /linpeas.sh -o cloud 
