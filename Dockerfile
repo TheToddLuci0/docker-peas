@@ -11,12 +11,13 @@ chmod +x /linpeas.sh
 EOF
 
 RUN echo "------\n$SKIP_PEAS\n------"
+RUN env
 
 RUN <<EOF
 if [[ $SKIP_PEAS == "true"]] ; then
         echo "Skipping execution...."
 else
-        /linpeas.sh -o cloud 
+        bash /linpeas.sh -o cloud 
 fi
 EOF
 
